@@ -59,7 +59,7 @@ class PacienteController {
 		
 		pacienteInstance.save(flush:true)
 		println "ingrese a saveFromModal"
-		println "paciente :" + pacienteInstance.nombre + pacienteInstance.apellido
+		println "paciente :" + params
 		redirect(controller: "HistoriaClinica", action: "create", model:[pacienteInstance : pacienteInstance])
 	}
 

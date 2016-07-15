@@ -1,7 +1,6 @@
 <%@ page import="mp.personalfrontend.Paciente" %>
 
 
-
 <div class="fieldcontain ${hasErrors(bean: pacienteInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="paciente.nombre.label" default="Nombre" />
@@ -62,6 +61,7 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="pais" maxlength="20" required="" value="${pacienteInstance?.pais}"/>
+<%--	<g:countrySelect name="countryCode" value="${pacienteInstance?.pais}" noSelection="['':'- Elegir pais -']"/>--%>
 
 </div>
 
@@ -115,7 +115,7 @@
 		<g:message code="paciente.sexo.label" default="Sexo" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select name="sexo" from="${['M','F']}" value="${sexo}" noSelection="['':'-Sexo-']"/>
+	<g:select name="sexo" from="${['M','F']}" value="${sexo}" noSelection="['':'- Sexo -']"/>
 
 </div>
 

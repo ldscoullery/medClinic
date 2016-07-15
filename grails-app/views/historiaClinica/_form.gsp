@@ -1,6 +1,6 @@
 <%@ page import="mp.personalfrontend.HistoriaClinica" %>
 <%! import enums.MotivoVisita %>
-
+<calendar:resources lang="es" theme="blue2"/> <!--blue, aqua, blue2, brown, green, system, tas, win2k-1, win2k-2   -->
 
 
 <div class="fieldcontain ${hasErrors(bean: historiaClinicaInstance, field: 'paciente', 'error')} required">
@@ -18,7 +18,8 @@
 		<g:message code="historiaClinica.fechaIngreso.label" default="Fecha Ingreso" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fechaIngreso" format="dd-MM-YYYY" precision="day"  value="${historiaClinicaInstance?.fechaIngreso}"  />
+<%--	<g:datePicker name="fechaIngreso" format="dd-MM-YYYY" precision="day"  value="${historiaClinicaInstance?.fechaIngreso}"  />--%>
+	<calendar:datePicker name="fechaIngreso" dateFormat="%m/%d/%Y" defaultValue="${new Date()}"/>
 
 </div>
 
